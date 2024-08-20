@@ -1,0 +1,110 @@
+unit Numbers_u;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, ExtCtrls;
+
+type
+  TfrmNumbers = class(TForm)
+    pnlInteger: TPanel;
+    pnlReal: TPanel;
+    btniMultiply: TButton;
+    btniSquare: TButton;
+    BtniSqrRt: TButton;
+    btnrMultiply: TButton;
+    btnrTrunc: TButton;
+    btnrSquare: TButton;
+    btnrqrRt: TButton;
+    Panel3: TPanel;
+    btnGetInteger: TButton;
+    btnGetReal: TButton;
+    btnRDivide: TButton;
+    Panel1: TPanel;
+    iMod: TButton;
+    iDiv: TButton;
+    Panel2: TPanel;
+    Label1: TLabel;
+    lblIntOut: TLabel;
+    Label3: TLabel;
+    lblRealOut: TLabel;
+    procedure btnGetIntegerClick(Sender: TObject);
+    procedure btnGetRealClick(Sender: TObject);
+    procedure btnrMultiplyClick(Sender: TObject);
+    procedure btniMultiplyClick(Sender: TObject);
+    procedure btnRDivideClick(Sender: TObject);
+    procedure iModClick(Sender: TObject);
+    procedure iDivClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmNumbers: TfrmNumbers;
+  iNum1, iNum2 : integer;
+  rNum1,rNum2 : real;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmNumbers.btnGetIntegerClick(Sender: TObject);
+begin  Randomize;
+
+  iNum1 := random(50)+ 50;
+  iNum2 := random(50)+ 50;
+end;
+
+procedure TfrmNumbers.btnGetRealClick(Sender: TObject);
+begin
+Randomize;
+  rNum1 := random ;
+  rNum2 := random;
+  rNum1 := rNum1*100;
+  rNum2 := rNum2*100;
+  lblRealOut.caption:=floattostrF(rNum1,ffFixed,4,2);
+//  showmessage(floattostrF(rNum2,ffFixed,4,2));
+  end;
+
+procedure TfrmNumbers.btniMultiplyClick(Sender: TObject);
+var iAnswer : integer;
+begin
+ iAnswer := iNum1*inum2;
+ lblIntOut.Caption := inttostr(iAnswer);
+
+end;
+
+procedure TfrmNumbers.btnRDivideClick(Sender: TObject);
+var rAnswer: Real;
+begin
+randomize;
+   rAnswer := rNum2/(random(5)+10);
+   lblRealOut.Caption := inttostr(Round(rAnswer));
+end;
+
+procedure TfrmNumbers.btnrMultiplyClick(Sender: TObject);
+var rAnswer : real;
+begin
+    rAnswer := rNum1 * rNum2;
+    lblRealOut.Caption := floattostrF(rAnswer,ffFixed,4,3);
+end;
+
+procedure TfrmNumbers.iDivClick(Sender: TObject);
+var iAnswer: integer;
+begin
+    iAnswer := iNum2 div (random(10)+1);
+    lblIntOut.Caption:= inttostr(iAnswer);
+end;
+
+procedure TfrmNumbers.iModClick(Sender: TObject);
+var iAnswer: integer;
+begin
+Randomize;
+   iAnswer := iNum1 mod (random(10));
+   lblIntOut.Caption:= inttostr(iAnswer);
+end;
+
+end.

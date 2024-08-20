@@ -1,0 +1,68 @@
+unit deleterAndInserter_u;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TfrmCharacterReplacer = class(TForm)
+    lblPhrase: TLabel;
+    lblHeader: TLabel;
+    edtPhrase: TEdit;
+    lblCharacterPosition: TLabel;
+    lblNew: TLabel;
+    edtNewChar: TEdit;
+    btnReplaceOne: TButton;
+    edtOldPosition: TEdit;
+    lblOldCharacter: TLabel;
+    edtOldChar: TEdit;
+    btnReplaceAll: TButton;
+    procedure btnReplaceAllClick(Sender: TObject);
+    procedure btnReplaceOneClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmCharacterReplacer: TfrmCharacterReplacer;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmCharacterReplacer.btnReplaceAllClick(Sender: TObject);
+var
+  sPhrase, sOldChar : String;
+  cNewChar : Char;
+  i : Integer;
+begin
+  sPhrase := edtPhrase.Text;
+  cNewChar := edtNewChar.Text[1];
+  sOldChar := edtOldChar.Text;
+
+  for i := 1 to Length(sPhrase) do
+  begin
+    if sPhrase[i] = sOldChar then
+      sPhrase[i] := cNewChar;
+  end;
+  ShowMessage(sPhrase);
+end;
+
+procedure TfrmCharacterReplacer.btnReplaceOneClick(Sender: TObject);
+var
+  sPhrase : String;
+  cNewChar : Char;
+  iPosition : Integer;
+begin
+  sPhrase := edtPhrase.Text;
+  cNewChar := edtNewChar.Text[1];
+  iPosition := StrToInt(edtOldPosition.Text);
+  sPhrase[iPosition] := cNewChar;
+  ShowMessage(sPhrase);
+end;
+
+end.

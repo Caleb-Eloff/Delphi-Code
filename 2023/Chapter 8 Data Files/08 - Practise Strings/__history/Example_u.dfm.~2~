@@ -1,0 +1,80 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Practise Combining String'
+  ClientHeight = 286
+  ClientWidth = 387
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label2: TLabel
+    Left = 40
+    Top = 24
+    Width = 89
+    Height = 13
+    Caption = 'Name and address'
+  end
+  object Favoy: TLabel
+    Left = 232
+    Top = 26
+    Width = 51
+    Height = 13
+    Caption = 'Favourites'
+  end
+  object edtName: TEdit
+    Left = 40
+    Top = 45
+    Width = 121
+    Height = 21
+    TabOrder = 0
+    Text = 'edtName'
+  end
+  object EdtSurname: TEdit
+    Left = 40
+    Top = 72
+    Width = 121
+    Height = 21
+    TabOrder = 1
+    Text = 'EdtSurname'
+  end
+  object EdtSong: TEdit
+    Left = 232
+    Top = 45
+    Width = 121
+    Height = 21
+    TabOrder = 2
+    Text = 'Song'
+  end
+  object edtColour: TEdit
+    Left = 232
+    Top = 72
+    Width = 121
+    Height = 21
+    TabOrder = 3
+    Text = 'Colour'
+  end
+  object Button1: TButton
+    Left = 40
+    Top = 120
+    Width = 75
+    Height = 25
+    Caption = 'Display'
+    TabOrder = 4
+    OnClick = Button1Click
+  end
+  object Memo1: TMemo
+    Left = 136
+    Top = 122
+    Width = 217
+    Height = 119
+    Lines.Strings = (
+      'Memo1')
+    TabOrder = 5
+  end
+end

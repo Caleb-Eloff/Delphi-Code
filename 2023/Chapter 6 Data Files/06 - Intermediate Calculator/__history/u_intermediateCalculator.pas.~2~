@@ -1,0 +1,69 @@
+unit u_intermediateCalculator;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Edit,
+  FMX.StdCtrls, FMX.Controls.Presentation;
+
+type
+  TfrmCalculator = class(TForm)
+    btnPlus: TButton;
+    btnMinus: TButton;
+    btnMultiply: TButton;
+    btnDivide: TButton;
+    edtNumber1: TEdit;
+    edtNumber2: TEdit;
+    lblAnswer: TLabel;
+    btnSqrt: TButton;
+    btnRound: TButton;
+    procedure btnPlusClick(Sender: TObject);
+    procedure btnSqrtClick(Sender: TObject);
+    procedure btnRoundClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmCalculator: TfrmCalculator;
+
+implementation
+
+{$R *.fmx}
+
+procedure TfrmCalculator.btnPlusClick(Sender: TObject);
+begin
+  lblAnswer.Text := (edtNumber1.Text.ToDouble + edtNumber2.Text.ToDouble).ToString;
+end;
+
+procedure TfrmCalculator.btnRoundClick(Sender: TObject);
+var
+  dInput : Double;
+  iAnswer : Integer;
+
+begin
+  dInput := edtNumber1.Text.ToDouble;
+  iAnswer := Round(dInput);
+  lblAnswer.Text := iAnswer.ToString;
+end;
+
+procedure TfrmCalculator.btnSqrtClick(Sender: TObject);
+var
+  dInput, dAnswer : Double;
+
+begin
+  dInput := edtNumber1.Text.ToDouble;
+  if dNumber > 0 then
+  begin
+    dAnswer := Sqrt(dInput);
+    lblAnswer.Text := dAnswer.ToString;
+  end
+  else
+    ShowMessage('Invalid input. Please enter a positive number.').
+
+end;
+
+end.

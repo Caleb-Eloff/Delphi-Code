@@ -1,0 +1,78 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Create an ID Code'
+  ClientHeight = 329
+  ClientWidth = 453
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 248
+    Top = 69
+    Width = 91
+    Height = 13
+    Caption = 'Your security ID is:'
+  end
+  object lblSecureID: TLabel
+    Left = 248
+    Top = 112
+    Width = 54
+    Height = 13
+    Caption = 'lblSecureID'
+  end
+  object lblInfo: TLabel
+    Left = 24
+    Top = 24
+    Width = 80
+    Height = 13
+    Caption = 'Enter your name'
+  end
+  object edtInput: TEdit
+    Left = 32
+    Top = 48
+    Width = 121
+    Height = 21
+    TabOrder = 0
+    Text = 'edtInput'
+  end
+  object btnCreate: TButton
+    Left = 56
+    Top = 230
+    Width = 75
+    Height = 25
+    Caption = 'btnCreate'
+    TabOrder = 1
+    OnClick = btnCreateClick
+  end
+  object edtAge: TEdit
+    Left = 32
+    Top = 88
+    Width = 121
+    Height = 21
+    TabOrder = 2
+    Text = 'edtAge'
+  end
+  object edtHeight: TEdit
+    Left = 32
+    Top = 128
+    Width = 121
+    Height = 21
+    TabOrder = 3
+    Text = 'edtHeight'
+  end
+  object edt3Characters: TEdit
+    Left = 32
+    Top = 168
+    Width = 121
+    Height = 21
+    TabOrder = 4
+    Text = 'edt3Characters'
+  end
+end
