@@ -1,0 +1,68 @@
+unit PerfectSq_u;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls;
+
+type
+  TfrmWinningCode = class(TForm)
+    btnCalculate: TButton;
+    Label1: TLabel;
+    lblRoot: TLabel;
+    lblGetTrunc: TLabel;
+    lblTrunc: TLabel;
+    lblGetRound: TLabel;
+    lblRound: TLabel;
+    lblSquare: TLabel;
+    lblGetSquare: TLabel;
+    lblDisplayNum: TLabel;
+    btnYes: TButton;
+    btnNo: TButton;
+    Label2: TLabel;
+    lblSquare2: TLabel;
+    procedure btnCalculateClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmWinningCode: TfrmWinningCode;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmWinningCode.btnCalculateClick(Sender: TObject);
+Var  iNumber, iPerfect, iRoot, iTrunc, iSquare, iSquare2, iRound: integer ;
+begin
+   iNumber := random(500)+1;
+   lblDisplayNum.caption:= inttostr(inumber);
+   iRoot := sqrt(iNumber);
+   lblRoot.Caption := inttostr(iRoot);
+   iTrunc:= trunc(iRoot);
+   lblTrunc.Caption := inttostr(iTrunc);
+   iRound:= round(iRoot);
+   lblRound.Caption := inttostr(iRound);
+   isquare:= sqr(iTrunc);
+   lblSquare.Caption := inttostr(iSquare);
+   isquare2 := sqr(iRound);
+   lblSquare2.caption := inttostr(isquare2);
+end;
+
+end.
+  {Get the sqrroot of the number
+  add a random number between 10 and 50
+  divide by 3
+  round the result
+  sqr the number
+
+  Perfect squares
+  Enter number is it a perfect square?
+  Get square root if the root = the trunc of the sqr root it is a perfect square
+  display perfect squares on one side
+  and squares on the other
+  }

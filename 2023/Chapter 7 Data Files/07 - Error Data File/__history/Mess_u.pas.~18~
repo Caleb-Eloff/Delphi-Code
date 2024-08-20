@@ -1,0 +1,72 @@
+unit Mess_u;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    edtName: TEdit;
+    edtCellNO: TEdit;
+    btnNewUserName: TButton;
+    btnPassword: TButton;
+    memOutput: TMemo;
+    lblName: TLabel;
+    lblPassword: TLabel;
+    procedure btnNewUserNameClick(Sender: TObject);
+   // procedure btnPasswordClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.btnNewUserNameClick(Sender: TObject);
+var sNewUsername, sName:string;
+   k, iTotal, iRandomNo: integer;
+begin
+  sName := edtName.Text;
+  for k:=1 to length(sName) do
+    begin
+      if upcase(sName[k]) in ['A','E','I','O','U'] then
+         Begin
+           iRandomNo := Random(10);
+           sNewUsername:= inttostr(iRandomNo);
+           iTotal := iTotal + iRandomNo;
+         End // ends if true
+     else
+     sNewUsername := sNewUsername + sName[k];
+      memOutput.Lines.Add('Username: ' + sNewUsername + inttostr(iTotal) );
+    end; // ends loop
+
+    end;
+
+{procedure TForm1.btnPasswordClick(Sender: TObject);
+var sNewPassword, sCell:string;
+    begin
+  sCell := edtCellNo.Text;
+    while k < 10 do
+  begin
+    case sCell[k] of
+      '3' : SnewPassword := sNewPassword + '%';
+      '6' : SnewPassword := sNewPassword + '*';
+      '7' : SnewPassword := sNewPassword + '@';
+      '9' : SnewPassword := sNewPassword + '#';
+
+    else sNewPassword := sNewPassword + sCell[k];
+    end ; //ends case
+  end;
+  memOutput.Lines.Add(sNewPassword) ;
+end;   }
+end.
+
+

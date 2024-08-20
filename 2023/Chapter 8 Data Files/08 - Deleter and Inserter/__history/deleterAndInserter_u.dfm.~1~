@@ -1,0 +1,127 @@
+object frmCharacterReplacer: TfrmCharacterReplacer
+  Left = 0
+  Top = 0
+  Caption = 'Character Replacer'
+  ClientHeight = 228
+  ClientWidth = 241
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object lblPhrase: TLabel
+    Left = 8
+    Top = 46
+    Width = 37
+    Height = 13
+    Caption = 'Phrase:'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object lblHeader: TLabel
+    Left = 8
+    Top = 8
+    Width = 220
+    Height = 29
+    Caption = 'Character replacer'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object lblCharacterPosition: TLabel
+    Left = 8
+    Top = 140
+    Width = 60
+    Height = 13
+    Caption = 'Old position:'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object lblNew: TLabel
+    Left = 8
+    Top = 94
+    Width = 74
+    Height = 13
+    Caption = 'New character:'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object lblOldCharacter: TLabel
+    Left = 158
+    Top = 140
+    Width = 69
+    Height = 13
+    Caption = 'Old character:'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object edtPhrase: TEdit
+    Left = 8
+    Top = 65
+    Width = 220
+    Height = 21
+    TabOrder = 0
+  end
+  object edtNewChar: TEdit
+    Left = 8
+    Top = 113
+    Width = 70
+    Height = 21
+    TabOrder = 1
+  end
+  object btnReplaceOne: TButton
+    Left = 8
+    Top = 195
+    Width = 70
+    Height = 25
+    Caption = 'Replace one'
+    TabOrder = 2
+    OnClick = btnReplaceOneClick
+  end
+  object edtOldPosition: TEdit
+    Left = 8
+    Top = 159
+    Width = 70
+    Height = 21
+    TabOrder = 3
+  end
+  object edtOldChar: TEdit
+    Left = 158
+    Top = 159
+    Width = 70
+    Height = 21
+    TabOrder = 4
+  end
+  object btnReplaceAll: TButton
+    Left = 157
+    Top = 195
+    Width = 70
+    Height = 25
+    Caption = 'Replace all'
+    TabOrder = 5
+    OnClick = btnReplaceAllClick
+  end
+end
