@@ -1,0 +1,14 @@
+program deleterAndInserter_p;
+
+uses
+  Vcl.Forms,
+  deleterAndInserter_u in 'deleterAndInserter_u.pas' {frmCharacterReplacer};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfrmCharacterReplacer, frmCharacterReplacer);
+  Application.Run;
+end.

@@ -1,0 +1,47 @@
+unit uTrafficFines;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, ComCtrls,Math;
+
+type
+  TfrmTrafficeFine = class(TForm)
+    lblFineAmount: TLabel;
+    edtFineAmount: TEdit;
+    btnCalculate: TButton;
+    redDisplay: TRichEdit;
+    procedure btnCalculateClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmTrafficeFine: TfrmTrafficeFine;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmTrafficeFine.btnCalculateClick(Sender: TObject);
+var rFineAmount,rInterest,rTotalFine:real;
+    iAmountPayable:integer;
+begin
+   rFineAmount:=StrToInt(edtFineAmount.Text);
+   rInterest:=rFineAmount*0.1;
+   rTotalFine:=rFineAmount+rInterest;
+   iAmountPayable:=Ceil(rTotalFine);
+   redDisplay.Clear;
+   redDisplay.Font.Name:='Courier';
+   redDisplay.Paragraph.TabCount:=1;
+   redDisplay.Paragraph.Tab[0]:=120;
+   redDisplay.Lines.Add('Overdue Amount'+#9+Format('R%10.2f',[rFineAmount]));
+   redDisplay.Lines.Add('Interest Payable'+#9+Format('R%10.2f',[rInterest]));
+   redDisplay.Lines.Add('Total Overdue'+#9+Format('R%10.2f',[rTotalFine]));
+   redDisplay.Lines.Add('Amount Payable'+#9+Format('R%10d',[iAmountPayable]));
+end;
+
+end.

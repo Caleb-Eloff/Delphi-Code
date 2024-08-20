@@ -1,0 +1,64 @@
+unit u_bestBirthdayCard;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.StdCtrls,
+  FMX.Controls.Presentation, FMX.Objects, FMX.Edit;
+
+type
+  TfrmBirthday = class(TForm)
+    imgCover: TImage;
+    pnlBack: TPanel;
+    lblGreeting: TLabel;
+    lblBody: TLabel;
+    lblSalutation: TLabel;
+    edtName: TEdit;
+    lblName: TLabel;
+    btnGenerate: TButton;
+    lblCover: TLabel;
+    procedure btnGenerateClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmBirthday: TfrmBirthday;
+
+implementation
+
+{$R *.fmx}
+
+
+
+procedure TfrmBirthday.btnGenerateClick(Sender: TObject);
+var
+  sMyName, sFriendName, sMessage : String;
+  aMessages : Array[1..5] of String;
+  iRandom : Integer;
+
+begin
+  Randomize;
+  iRandom := Random(5) + 1;
+
+  aMessages[1] := 'Count your life by smiles, not tears. Count your age by friends, not years. Happy birthday, ';
+  aMessages[2] := 'May your Facebook wall be filled with messages from people you never talk to. Happy birthday, ';
+  aMessages[3] := 'You are only young once, but you can be immature for a lifetime. Happy birthday, ';
+  aMessages[4] := 'From good friends and true, from old friends and new, may good luck go with you and happiness too! Happy birthday, ';
+  aMessages[5] := 'I hope all your birthday wishes and dreams come true. Happy birthday, ';
+
+  sMyName := 'Stefan';
+  sFriendName := edtName.Text;
+  sMessage := aMessages[iRandom];
+
+  lblCover.Text := 'Happy Birthday, ' + sFriendName;
+  lblGreeting.Text := 'Hi ' + sFriendName + '!';
+  lblSalutation.Text := 'From ' + sMyName;
+  lblBody.Text := sMessage + sFriendName + '!';
+
+end;
+
+end.

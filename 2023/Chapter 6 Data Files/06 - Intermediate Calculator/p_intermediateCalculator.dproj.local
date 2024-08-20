@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2018/10/28 19:05:58.000.611,=C:\Users\stefa\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2018/10/28 19:06:37.000.482,C:\Users\stefa\Documents\Embarcadero\Studio\Projects\Unit2.fmx=C:\Users\stefa\Documents\Embarcadero\Studio\Projects\IT Grade 10 Practical - Stefan\02 - Basic Calculator\u_basicCalculator.fmx</Transaction>
+    <Transaction>2018/10/28 19:06:37.000.482,C:\Users\stefa\Documents\Embarcadero\Studio\Projects\Unit2.pas=C:\Users\stefa\Documents\Embarcadero\Studio\Projects\IT Grade 10 Practical - Stefan\02 - Basic Calculator\u_basicCalculator.pas</Transaction>
+    <Transaction>2018/10/28 19:07:29.000.581,C:\Users\stefa\Documents\Embarcadero\Studio\Projects\Project2.dproj=C:\Users\stefa\Documents\Embarcadero\Studio\Projects\IT Grade 10 Practical - Stefan\02 - Basic Calculator\p_basicCalculator.dproj</Transaction>
+    <Transaction>2018/10/29 16:15:01.000.740,C:\Users\stefa\Documents\Embarcadero\Studio\Projects\IT Grade 10 Practical - Stefan\02 - Basic Calculator\u_basicCalculator.fmx=C:\Users\stefa\Documents\Embarcadero\Studio\Projects\IT Grade 10 Practical - Stefan\08 - Intermediate Calculator\u_intermediateCalculator.fmx</Transaction>
+    <Transaction>2018/10/29 16:15:01.000.740,C:\Users\stefa\Documents\Embarcadero\Studio\Projects\IT Grade 10 Practical - Stefan\02 - Basic Calculator\u_basicCalculator.pas=C:\Users\stefa\Documents\Embarcadero\Studio\Projects\IT Grade 10 Practical - Stefan\08 - Intermediate Calculator\u_intermediateCalculator.pas</Transaction>
+    <Transaction>2018/10/29 16:15:33.000.573,C:\Users\stefa\Documents\Embarcadero\Studio\Projects\IT Grade 10 Practical - Stefan\02 - Basic Calculator\p_basicCalculator.dproj=C:\Users\stefa\Documents\Embarcadero\Studio\Projects\IT Grade 10 Practical - Stefan\08 - Intermediate Calculator\p_intermediateCalculator.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
