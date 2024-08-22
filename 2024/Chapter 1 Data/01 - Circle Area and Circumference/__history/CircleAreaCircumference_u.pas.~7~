@@ -32,7 +32,7 @@ var
 
 begin
 
-  rRadius := RoundTo(StrToFloat(edtRadius.Text), -2);
+  rRadius := StrToFloat(edtRadius.Text);
 
   rArea := RoundTo((rRadius * rRadius * Pi), -2);
   rCirc := RoundTo((2 * Pi * rRadius), -2);

@@ -32,10 +32,10 @@ var
 
 begin
 
-  rRadius := RoundTo(StrToFloat(edtRadius.Text), -2);
+  rRadius := StrToFloat(edtRadius.Text);
 
-  rArea := RoundTo((rRadius * rRadius * Pi), -2);
-  rCirc := RoundTo((2 * Pi * rRadius), -2);
+  rArea := rRadius * rRadius * Pi;
+  rCirc := 2 * Pi * rRadius;
 
   redDisplay.Lines.Add('Radius: ' + #9 + FloatToStr(rRadius));
   redDisplay.Lines.Add('Area: ' + #9 + FloatToStr(rArea));
