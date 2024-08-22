@@ -33,8 +33,6 @@ var
 
 begin
 
-  redDisplay.Clear;
-
   iRandom := RandomRange(10, 20 + 1);
   edtNumber.Text := IntToStr(iRandom);
   redDisplay.Lines.Add('Number' + #9 + 'Square' + #9 + 'Cube' + #9 +
@@ -44,8 +42,8 @@ begin
   begin
 
     iSquare := i * i;
-    rCube := RoundTo(i * i * i, -2);
-    rSquareRoot := RoundTo(Sqrt(i), -2);
+    rCube := iRandom * i * i;
+    rSquareRoot := Sqrt(i);
 
     redDisplay.Lines.Add(IntToStr(i) + #9 + IntToStr(iSquare) + #9 +
       FloatToStr(rCube) + #9 + FloatToStr(rSquareRoot));
