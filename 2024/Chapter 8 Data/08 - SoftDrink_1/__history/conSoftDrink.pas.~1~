@@ -3,20 +3,15 @@ unit conSoftDrink;
 interface
 
 uses
-  SysUtils, Classes, Data.DB, Data.Win.ADODB;
+  SysUtils, Classes;
 
 type
   TdbmSoftDrink = class(TDataModule)
-    conSoftDrinkDB: TADOConnection;
-    tblSoftDrink: TADOTable;
-    dscSoftDrink: TDataSource;
-
     procedure DataModuleCreate(Sender: TObject);
   private
     { Private declarations }
   public
     { Public declarations }
-
   end;
 
 var
@@ -28,7 +23,8 @@ implementation
 
 procedure TdbmSoftDrink.DataModuleCreate(Sender: TObject);
 begin
-  // OnCreate Code
+   // OnCreate Code
+
 
 end;
 

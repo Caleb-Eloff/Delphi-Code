@@ -7,15 +7,15 @@ uses
 
 type
   TdbmSoftDrink = class(TDataModule)
-    conSoftDrinkDB: TADOConnection;
-    tblSoftDrink: TADOTable;
-    dscSoftDrink: TDataSource;
 
     procedure DataModuleCreate(Sender: TObject);
   private
     { Private declarations }
   public
     { Public declarations }
+    conSoftDrinkDB: TADOConnection;
+    tblSoftDrink: TADOTable;
+    dscSoftDrink: TDataSource;
 
   end;
 

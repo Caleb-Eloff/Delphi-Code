@@ -14,7 +14,6 @@ type
     { Private declarations }
   public
     { Public declarations }
-
   end;
 
 var
@@ -28,7 +27,7 @@ procedure TForm1.FormShow(Sender: TObject);
 begin
   // Form Show Code
 
-  dbgSoftDrink.DataSource := dbmSoftDrink.dscSoftDrink;
+  dbgSoftDrink.DataSource := conSoftDrinkDB.dscSoftDrink;
 
 end;
 

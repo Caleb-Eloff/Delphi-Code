@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, Grids, DBGrids, Data.DB, conSoftDrink;
+  Dialogs, Grids, DBGrids;
 
 type
   TForm1 = class(TForm)
@@ -14,7 +14,6 @@ type
     { Private declarations }
   public
     { Public declarations }
-
   end;
 
 var
@@ -27,8 +26,6 @@ implementation
 procedure TForm1.FormShow(Sender: TObject);
 begin
   // Form Show Code
-
-  dbgSoftDrink.DataSource := dbmSoftDrink.dscSoftDrink;
 
 end;
 
