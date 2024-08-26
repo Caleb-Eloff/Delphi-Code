@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ComCtrls, StdCtrls, Keyboard, ExtCtrls, Grids, DBGrids, conFriendBook;
+  Dialogs, ComCtrls, StdCtrls, Keyboard, ExtCtrls, Grids, DBGrids;
 
 type
   TfrmFriendBook = class(TForm)

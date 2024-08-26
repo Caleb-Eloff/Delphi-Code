@@ -40,7 +40,7 @@ begin
     '; Persist Security Info = False ';
   ADOConnection.LoginPrompt := False;
   conFriendBookDB.Open;
-  conFriendBookDB.Connection := ADOConnection;
+  ConFriendBookDB.Connection := ADOConnection;
   conFriendBookDB.TableName := 'tblFriends';
   dscFriends.DataSet := conFriendBookDB;
   conFriendBookDB.Open;

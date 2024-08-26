@@ -29,22 +29,6 @@ implementation
 
 procedure TdbmFB.DataModuleCreate(Sender: TObject);
 begin
-
-  ADOConnection := TADOConnection.Create(dbmFB);
-  conFriendBookDB := TADOTable.Create(dbmFB);
-  dscFriends := TDataSource.Create(dbmFB);
-  conFriendBookDB.Close;
-  conFriendBookDB.ConnectionString :=
-    'Provider=Microsoft.Jet. OLEDB.4.0;Data Source = ' +
-    ExtractFilePath(ParamStr(0)) + 'FriendBookDB.mdb' +
-    '; Persist Security Info = False ';
-  ADOConnection.LoginPrompt := False;
-  conFriendBookDB.Open;
-  conFriendBookDB.Connection := ADOConnection;
-  conFriendBookDB.TableName := 'tblFriends';
-  dscFriends.DataSet := conFriendBookDB;
-  conFriendBookDB.Open;
-
   {
     ADOConnectionName.ConnectionString :=
     'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=' + ExtractFilePath
