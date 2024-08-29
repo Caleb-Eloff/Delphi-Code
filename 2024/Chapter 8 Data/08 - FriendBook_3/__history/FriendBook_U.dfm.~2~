@@ -3,8 +3,8 @@ object frmFriendBook: TfrmFriendBook
   Top = 0
   BorderStyle = bsToolWindow
   Caption = 'FriendBook'
-  ClientHeight = 512
-  ClientWidth = 741
+  ClientHeight = 459
+  ClientWidth = 733
   Color = clWhite
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -139,6 +139,5 @@ object frmFriendBook: TfrmFriendBook
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
-    OnCellClick = dbgFriendsCellClick
   end
 end

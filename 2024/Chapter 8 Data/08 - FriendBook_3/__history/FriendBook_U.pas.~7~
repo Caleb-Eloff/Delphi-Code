@@ -4,7 +4,8 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ComCtrls, StdCtrls, Keyboard, ExtCtrls, Grids, DBGrids, conFriendBook,
+  Dialogs, ComCtrls, StdCtrls, Keyboard, ExtCtrls, Grids, DBGrids,
+  conFriendBook,
   Data.DB;
 
 type
@@ -41,7 +42,18 @@ implementation
 
 procedure TfrmFriendBook.btnCreateClick(Sender: TObject);
 begin
- // Create
+  // Create
+
+  dbmFB.tblFriends.Append;
+
+  dbmFB.tblFriends['Surname'] := InputBox('FriendBook',
+    'Enter your surname: ', '');
+  dbmFB.tblFriends['FirstNames'] := InputBox('FriendBook',
+    'Enter your first name: ', '');
+  dbmFB.tblFriends['DateOfBirth'] := Date;
+  dbmFB.tblFriends['Class'] := InputBox('FriendBook', 'Enter your class: ', '');
+  dbmFB.tblFriends['ProfileView'] := 0;
+  dbmFB.tblFriends['Bio'] := '';
 
 end;
 
@@ -53,7 +65,7 @@ end;
 
 procedure TfrmFriendBook.btnDeleteClick(Sender: TObject);
 begin
- // Delete
+  // Delete
 
 end;
 
@@ -62,6 +74,11 @@ begin
   // Form Show Tasks
 
   dbgFriends.DataSource := dbmFB.dscFriends;
+
+  dbgFriends.Columns[0].Width := 30;
+  dbgFriends.Columns[1].Width := 70;
+  dbgFriends.Columns[2].Width := 70;
+  dbgFriends.Columns[3].Width := 100;
 
 end;
 

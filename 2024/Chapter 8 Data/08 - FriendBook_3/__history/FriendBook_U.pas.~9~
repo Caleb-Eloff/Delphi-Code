@@ -67,15 +67,6 @@ procedure TfrmFriendBook.btnUpdateClick(Sender: TObject);
 begin
   // Update
 
-  dbmFB.tblFriends.Edit;
-
-  dbmFB.tblFriends['Bio'] := memBio.Text;
-  dbmFB.tblFriends['DateOfBirth'] := dtpBirthday.Date;
-  dbmFB.tblFriends['Class'] := edtClass.Text;
-
-  dbmFB.tblFriends.Post;
-  ShowMessage('Profile updated');
-
 end;
 
 procedure TfrmFriendBook.dbgFriendsCellClick(Column: TColumn);
@@ -88,30 +79,11 @@ begin
   edtClass.Text := dbmFB.tblFriends['Class'];
   edtProfileViews.Text := dbmFB.tblFriends['ProfileViews'];
 
-  dbmFB.tblFriends.Edit;
-  dbmFB.tblFriends['ProfileViews'] := dbmFB.tblFriends['ProfileViews'] + 1;
-  dbmFB.tblFriends.Post;
-
-  edtProfileViews.Text := dbmFB.tblFriends['ProfileViews'];
-
 end;
 
 procedure TfrmFriendBook.btnDeleteClick(Sender: TObject);
 begin
   // Delete
-
-  if MessageDlg('Are you sure?', TMsgDlgType.mtConfirmation, mbYesNo, 0) = mrYes
-  then
-  begin
-
-    dbmFB.tblFriends.Delete;
-    ShowMessage('Record Deleted');
-
-  end
-  else
-  begin
-    ShowMessage('Delete cancelled');
-  end;
 
 end;
 

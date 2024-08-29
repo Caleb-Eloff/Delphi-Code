@@ -100,19 +100,6 @@ procedure TfrmFriendBook.btnDeleteClick(Sender: TObject);
 begin
   // Delete
 
-  if MessageDlg('Are you sure?', TMsgDlgType.mtConfirmation, mbYesNo, 0) = mrYes
-  then
-  begin
-
-    dbmFB.tblFriends.Delete;
-    ShowMessage('Record Deleted');
-
-  end
-  else
-  begin
-    ShowMessage('Delete cancelled');
-  end;
-
 end;
 
 procedure TfrmFriendBook.FormShow(Sender: TObject);
