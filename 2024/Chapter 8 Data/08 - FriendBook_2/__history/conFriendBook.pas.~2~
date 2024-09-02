@@ -1,0 +1,40 @@
+unit conFriendBook;
+
+interface
+
+uses
+  SysUtils, Classes, ADODB, DB; // Include ADODB, DB in Uses
+
+type
+  TdbmFB = class(TDataModule)
+    procedure DataModuleCreate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+    // Declare DB Components here
+
+    ADOConnection: TADOConnection;
+    conFriendBookDB: TADOTable;
+    dscFriends: TDataSource;
+
+  end;
+
+var
+  dbmFB: TdbmFB;
+
+implementation
+
+{$R *.dfm}
+
+procedure TdbmFB.DataModuleCreate(Sender: TObject);
+begin
+  {
+    ADOConnectionName.ConnectionString :=
+    'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=' + ExtractFilePath
+    (ParamStr(0)) + 'DATABASE_NAME.mdb' + ';Persist Security Info=False';
+  }
+
+end;
+
+end.

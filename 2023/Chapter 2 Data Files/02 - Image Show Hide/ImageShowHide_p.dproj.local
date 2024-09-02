@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
-  <Transactions>
-    <Transaction>2024/08/20 19:03:42.006,=C:\Users\cjelo\OneDrive\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2024/08/20 19:04:26.753,C:\Users\cjelo\OneDrive\Desktop\GitHub\delphi-code\2023\Chapter 2 Data Files\02 - Image Show Hide\ImageShowHide_u.pas=C:\Users\cjelo\OneDrive\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2024/08/20 19:04:26.753,C:\Users\cjelo\OneDrive\Desktop\GitHub\delphi-code\2023\Chapter 2 Data Files\02 - Image Show Hide\ImageShowHide_u.dfm=C:\Users\cjelo\OneDrive\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
-    <Transaction>2024/08/20 19:04:36.575,C:\Users\cjelo\OneDrive\Desktop\GitHub\delphi-code\2023\Chapter 2 Data Files\02 - Image Show Hide\ImageShowHide_p.dproj=C:\Users\cjelo\OneDrive\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+	<Transactions>
+    <Transaction>2024/08/20 19:03:42.000.006,=C:\Users\cjelo\OneDrive\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/08/20 19:04:26.000.753,C:\Users\cjelo\OneDrive\Desktop\GitHub\delphi-code\2023\Chapter 2 Data Files\02 - Image Show Hide\ImageShowHide_u.pas=C:\Users\cjelo\OneDrive\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/08/20 19:04:26.000.753,C:\Users\cjelo\OneDrive\Desktop\GitHub\delphi-code\2023\Chapter 2 Data Files\02 - Image Show Hide\ImageShowHide_u.dfm=C:\Users\cjelo\OneDrive\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2024/08/20 19:04:36.000.575,C:\Users\cjelo\OneDrive\Desktop\GitHub\delphi-code\2023\Chapter 2 Data Files\02 - Image Show Hide\ImageShowHide_p.dproj=C:\Users\cjelo\OneDrive\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
   </Transactions>
 </BorlandProject>
